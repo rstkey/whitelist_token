@@ -1,12 +1,15 @@
 use anchor_lang::prelude::*;
 
 #[account]
-pub struct Sale {
+pub struct SaleAccount {
     pub authority: Pubkey,
     pub token_mint: Pubkey,
-    pub token_vault: Pubkey,
-    pub price: u64,
-    pub max_per_wallet: u64,
+    pub vault: Pubkey,
+    pub token_price: u64,
+    pub purchase_limit_per_wallet: u64,
+    pub bump: u8,
     pub total_supply: u64,
-    pub total_sold: u64,
+    pub sold_tokens: u64,
+    pub whitelisted_users: Vec<Pubkey>,
+    pub buyers: Vec<Pubkey>,
 }

@@ -7,26 +7,32 @@ pub mod error;
 use instructions::*;
 use state::*;
 
-declare_id!("8CfNbqPDAVDWZhTWEKg475aRzERSkXhRd4R37CHBShhQ");
+declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
 #[program]
-pub mod whitelist_token_sale {
+pub mod whitelist_token {
     use super::*;
 
     pub fn initialize(
         ctx: Context<Initialize>,
-        price: u64,
-        max_per_wallet: u64,
+        token_price: u64,
+        purchase_limit_per_wallet: u64,
         total_supply: u64,
     ) -> Result<()> {
-        instructions::initialize::handler(ctx, price, max_per_wallet, total_supply)
+        instructions::initialize::handler(ctx, token_price, purchase_limit_per_wallet, total_supply)
     }
 
-    pub fn add_to_whitelist(ctx: Context<AddToWhitelist>, user: Pubkey) -> Result<()> {
-        instructions::add_to_whitelist::handler(ctx, user)
+    pub fn whitelist_user(
+        ctx: Context<WhitelistUser>,
+        user: Pubkey,
+    ) -> Result<()> {
+        instructions::whitelist_user::handler(ctx, user)
     }
 
-    pub fn buy_tokens(ctx: Context<BuyTokens>, amount: u64) -> Result<()> {
-        instructions::buy_tokens::handler(ctx, amount)
+    pub fn purchase_tokens(
+        ctx: Context<PurchaseTokens>,
+        amount: u64,
+    ) -> Result<()> {
+        instructions::purchase_tokens::handler(ctx, amount)
     }
 }

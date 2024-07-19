@@ -1,5 +1,7 @@
 [features]
 seeds = false
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
 [programs.localnet]
 whitelist_token = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
 
@@ -12,3 +14,4 @@ wallet = "/home/ritikbhatt020/.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
