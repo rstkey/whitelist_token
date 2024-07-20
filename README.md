@@ -10,8 +10,6 @@ This Anchor-based Solana program enables a whitelist-gated token sale with a fix
 - **Set Token Price**: Update the token price.
 - **Pause/Resume Sale**: Temporarily halt or resume the sale.
 - **Return Tokens**: Return tokens to the vault.
-- **Withdraw Tokens**: Transfer tokens from the vault.
-- **End Sale**: Close the sale and clean up accounts.
 
 ## Instructions
 
