@@ -12,4 +12,5 @@ pub struct SaleAccount {
     pub sold_tokens: u64,
     pub whitelisted_users: Vec<Pubkey>,
     pub buyers: Vec<Pubkey>,
+    pub paused: bool,
 }

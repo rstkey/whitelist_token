@@ -45,6 +45,7 @@ pub fn handler(
     sale_account.purchase_limit_per_wallet = purchase_limit_per_wallet;
     sale_account.total_supply = total_supply;
     sale_account.sold_tokens = 0;
-
+    sale_account.paused = false;
+    
     Ok(())
 }

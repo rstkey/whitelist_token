@@ -35,4 +35,37 @@ pub mod whitelist_token {
     ) -> Result<()> {
         instructions::purchase_tokens::handler(ctx, amount)
     }
+
+    pub fn remove_whitelist_user(
+        ctx: Context<RemoveWhitelistUser>,
+        user: Pubkey,
+    ) -> Result<()> {
+        instructions::remove_whitelist_user::handler(ctx, user)
+    }
+
+    pub fn set_token_price(
+        ctx: Context<SetTokenPrice>,
+        new_price: u64,
+    ) -> Result<()> {
+        instructions::set_token_price::handler(ctx, new_price)
+    }
+
+    pub fn pause_sale(
+        ctx: Context<PauseSale>,
+    ) -> Result<()> {
+        instructions::pause_sale::handler(ctx)
+    }
+
+    pub fn resume_sale(
+        ctx: Context<ResumeSale>,
+    ) -> Result<()> {
+        instructions::resume_sale::handler(ctx)
+    }
+
+    pub fn return_tokens(
+        ctx: Context<ReturnTokens>,
+        amount: u64,
+    ) -> Result<()> {
+        instructions::return_tokens::handler(ctx, amount)
+    }
 }
