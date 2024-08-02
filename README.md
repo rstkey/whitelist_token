@@ -115,4 +115,4 @@ Please open issues or submit pull requests for improvements or bug fixes.
 
 ### Contact
 
-If you have any questions, feel free to reach out at [ritikbhatt020@gmail.com].
+If you have any questions, feel free to reach out at [lussi.petelius@gmail.com].
